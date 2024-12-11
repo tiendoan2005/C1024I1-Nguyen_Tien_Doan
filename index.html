@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bài tập </title>
+</head>
+<body>
+<div id="KQ"></div>
+<script>
+    let lists = [];
+
+    class Product {
+        constructor(code, name, price, quantity) {
+            this.code = code;
+            this.name = name;
+            this.price = price;
+            this.quantity = quantity;
+        }
+        toString() {
+            return `<p>
+                        Mã sản phẩm: ${this.code},
+                        Tên: ${this.name},
+                        Giá: ${this.price.toLocaleString()} VND,
+                        Số lượng: ${this.quantity}
+                    </p>`;
+        }
+    }
+
+    lists.push(new Product('SP001', 'Mac Mini M4', 13500000, 4))
+    lists.push(new Product('SP002', 'Mac Book Pro', 30500000, 3))
+    lists.push(new Product('SP003', 'ASUS X515', 2200000, 2))
+    document.getElementById("KQ").innerHTML = lists.join(" ")
+</script>
+</body>
+</html>
